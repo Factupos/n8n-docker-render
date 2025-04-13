@@ -10,22 +10,22 @@ services:
       - 5678
     envVars:
       - key: N8N_PORT
-        value: 5678
+        value: "5678"
       - key: N8N_HOST
-        value: 0.0.0.0
+        value: "0.0.0.0"
+      - key: WEBHOOK_URL
+        value: "https://n8n-docker-render-1.onrender.com/"
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
       - key: N8N_BASIC_AUTH_USER
-        value: admin
+        value: "admin"
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: admin123
-      - key: WEBHOOK_URL
-        value: https://n8n-docker-render-1.onrender.com/
-      - key: N8N_ALLOW_ORIGINS
-        value: https://factupos.co
-      - key: N8N_ENDPOINT_WEBHOOK
-        value: /webhook
-      - key: N8N_ENDPOINT_WEBHOOK_TEST
-        value: /webhook-test
+        value: "admin123"
       - key: N8N_USER_MANAGEMENT_DISABLED
-        value: "true"
+        value: "true"   # 🔒 DESACTIVA por completo el login por correo
+      - key: N8N_ALLOW_ORIGINS
+        value: "https://factupos.co"
+      - key: N8N_ENDPOINT_WEBHOOK
+        value: "/webhook"
+      - key: N8N_ENDPOINT_WEBHOOK_TEST
+        value: "/webhook-test"
