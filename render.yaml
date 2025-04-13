@@ -9,52 +9,23 @@ services:
     ports:
       - 5678
     envVars:
-      # Puerto y host de escucha
       - key: N8N_PORT
         value: 5678
       - key: N8N_HOST
         value: 0.0.0.0
-
-      # Activar autenticación básica (usuario/contraseña)
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
       - key: N8N_BASIC_AUTH_USER
-        value: "admin"
+        value: admin
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: "admin123"
-
-      # Webhook principal y dominio permitido para CORS
+        value: admin123
       - key: WEBHOOK_URL
-        value: "https://n8n-docker-render-1.onrender.com/"
+        value: https://n8n-docker-render-1.onrender.com/
       - key: N8N_ALLOW_ORIGINS
-        value: "https://factupos.co"
-
-      # Endpoints personalizados de los webhooks
+        value: https://factupos.co
       - key: N8N_ENDPOINT_WEBHOOK
-        value: "/webhook"
+        value: /webhook
       - key: N8N_ENDPOINT_WEBHOOK_TEST
-        value: "/webhook-test"
-
-      # Desactivar el sistema de gestión de usuarios (para que no pida correo)
+        value: /webhook-test
       - key: N8N_USER_MANAGEMENT_DISABLED
         value: "true"
-
-      #############################################################
-      ## ❌ VARIABLES DE CONEXIÓN A BASE DE DATOS COMENTADAS ❌ ##
-      ## Si alguna de estas está activa, forzará login por email ##
-      #############################################################
-
-      # - key: DB_TYPE
-      #   value: postgresdb
-      # - key: DB_POSTGRESDB_HOST
-      #   value: dpg-cvu2fqq4d50c73apf8t0-a.oregon-postgres.render.com
-      # - key: DB_POSTGRESDB_PORT
-      #   value: "5432"
-      # - key: DB_POSTGRESDB_DATABASE
-      #   value: n8n_3zik
-      # - key: DB_POSTGRESDB_USER
-      #   value: n8nuser
-      # - key: DB_POSTGRESDB_PASSWORD
-      #   value: f8JnUTQRySfKsm0EQycgbktld8R42u6v
-      # - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
-      #   value: "false"
