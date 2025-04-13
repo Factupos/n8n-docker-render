@@ -27,3 +27,6 @@ services:
         value: "/webhook"
       - key: N8N_ENDPOINT_WEBHOOK_TEST
         value: "/webhook-test"
+      - key: N8N_USER_MANAGEMENT_DISABLED
+        value: "true"
+
