@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: n8n
+    name: n8n-docker-render-1
     env: docker
     plan: free
     region: oregon
