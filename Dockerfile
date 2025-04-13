@@ -16,3 +16,4 @@ ENV WEBHOOK_URL=https://n8n.onrender.com/
 # Asegúrate de que el binario sea accesible
 ENTRYPOINT ["tini", "--"]
 CMD ["n8n"]
+EXPOSE 5678
