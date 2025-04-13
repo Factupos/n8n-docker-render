@@ -11,9 +11,9 @@ services:
     envVars:
       # Puerto y host de escucha
       - key: N8N_PORT
-        value: "5678"
+        value: 5678
       - key: N8N_HOST
-        value: "0.0.0.0"
+        value: 0.0.0.0
 
       # Activar autenticación básica (usuario/contraseña)
       - key: N8N_BASIC_AUTH_ACTIVE
