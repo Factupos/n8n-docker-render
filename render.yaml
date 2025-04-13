@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: n8n-docker-render-1
+    name: n8n
     env: docker
     plan: free
     region: oregon
@@ -20,7 +20,7 @@ services:
       - key: N8N_BASIC_AUTH_PASSWORD
         value: "admin123"
       - key: WEBHOOK_URL
-        value: "https://n8n-docker-render-1.onrender.com/"
+        value: "https://n8n.onrender.com/"
       - key: N8N_ALLOW_ORIGINS
         value: "https://factupos.co"
       - key: N8N_ENDPOINT_WEBHOOK
