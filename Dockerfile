@@ -11,7 +11,7 @@ ENV N8N_BASIC_AUTH_PASSWORD=admin123
 # Configuración de host y puerto
 ENV N8N_HOST=0.0.0.0
 ENV N8N_PORT=5678
-ENV WEBHOOK_URL=https://n8n.onrender.com/
+ENV WEBHOOK_URL=https://n8n-docker-render-1.onrender.com/
 
 # Asegúrate de que el binario sea accesible
 ENTRYPOINT ["tini", "--"]
