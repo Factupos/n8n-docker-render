@@ -6,8 +6,10 @@ services:
     region: oregon
     dockerfilePath: Dockerfile
     autoDeploy: true
-    ports:
-      - 5678
+    disk:
+      name: n8n-data
+      mountPath: /home/node/.n8n
+      sizeGB: 1
     envVars:
       - key: N8N_PORT
         value: "5678"
@@ -22,7 +24,7 @@ services:
       - key: N8N_ENDPOINT_WEBHOOK_TEST
         value: "/webhook-test"
       - key: DB_TYPE
-        value: "postgresdb"
+        value: "postgresql"
       - key: DB_POSTGRESDB_HOST
         value: "dpg-cvu2fqq4d50c73apf8t0-a.oregon-postgres.render.com"
       - key: DB_POSTGRESDB_PORT
