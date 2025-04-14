@@ -13,7 +13,7 @@ ENV N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN=true
 ENV N8N_HOST=0.0.0.0
 ENV N8N_PORT=5678
 ENV WEBHOOK_URL=https://n8n-docker-render-1.onrender.com/
-ENV GENERIC_TIMEZONE=https://factupos.co
+ENV N8N_ALLOW_ORIGINS=https://factupos.co
 
 # Configuración de conexión a la base de datos PostgreSQL
 ENV DB_TYPE=postgresdb
