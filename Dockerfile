@@ -17,3 +17,5 @@ ENV WEBHOOK_URL=https://n8n-docker-render-1.onrender.com/
 ENTRYPOINT ["tini", "--"]
 CMD ["n8n"]
 EXPOSE 5678
+ENV N8N_ALLOW_ORIGINS=https://factupos.co
+
