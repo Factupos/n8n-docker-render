@@ -27,5 +27,5 @@ ENV DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED=false
 # Configuración de inicio del contenedor
 COPY n8n-config.json /home/node/.n8n/config
 ENTRYPOINT ["tini", "--"]
-CMD ["n8n"]
+CMD ["n8n", "start"]
 EXPOSE 5678
