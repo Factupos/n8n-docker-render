@@ -25,6 +25,7 @@ ENV DB_POSTGRESDB_PASSWORD=tFpfmTSvsik91mUSWHQhh8552W0qYD2N
 ENV DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED=false
 
 # Configuración de inicio del contenedor
+COPY n8n-config.json /home/node/.n8n/config
 ENTRYPOINT ["tini", "--"]
 CMD ["n8n"]
 EXPOSE 5678
