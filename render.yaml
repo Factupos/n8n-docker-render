@@ -13,29 +13,7 @@ services:
       mountPath: /home/node/.n8n
       sizeGB: 1
     envVars:
-      # Configuración del servidor n8n
-      - key: N8N_PORT
-        value: "5678"
-      - key: N8N_HOST
-        value: "0.0.0.0"
-      - key: WEBHOOK_URL
-        value: "https://n8n-docker-render-1.onrender.com/"
-      - key: N8N_ENDPOINT_WEBHOOK
-        value: "/webhook"
-      - key: N8N_ENDPOINT_WEBHOOK_TEST
-        value: "/webhook-test"
-      
-      # Configuración de autenticación básica
-      - key: N8N_BASIC_AUTH_ACTIVE
-        value: "true"
-      - key: N8N_BASIC_AUTH_USER
-        value: "admin"
-      - key: N8N_BASIC_AUTH_PASSWORD
-        value: "admin123"
-      - key: N8N_USER_MANAGEMENT_DISABLED
-        value: "true"
-      
-      # Conexión a la nueva base de datos PostgreSQL
+      # Conexión a la base de datos PostgreSQL
       - key: DB_TYPE
         value: "postgresdb"
       - key: DB_POSTGRESDB_HOST
