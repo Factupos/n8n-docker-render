@@ -1,4 +1,5 @@
-FROM n8nio/n8n
+FROM n8nio/n8n:latest
+
 
 # Aplica permisos correctos automáticamente y configura autenticación básica
 ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
