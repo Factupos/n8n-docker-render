@@ -14,7 +14,7 @@ services:
       - key: N8N_HOST
         value: "0.0.0.0"
       - key: WEBHOOK_URL
-        value: https://n8n-docker-render-1.onrender.com
+        value: "https://n8n-docker-render-1.onrender.com/"
       - key: N8N_ALLOW_ORIGINS
         value: "https://factupos.co"
       - key: N8N_ENDPOINT_WEBHOOK
