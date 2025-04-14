@@ -1,0 +1,29 @@
+{
+  "endpoints": {
+    "webhook": {
+      "path": "webhook"
+    },
+    "webhookTest": {
+      "path": "webhook-test"
+    }
+  },
+  "security": {
+    "basicAuth": {
+      "active": true,
+      "user": "admin",
+      "password": "admin123"
+    },
+    "cors": {
+      "enabled": true,
+      "allowOrigin": [
+        "https://factupos.co"
+      ]
+    }
+  },
+  "editor": {
+    "userManagementDisabled": true
+  },
+  "generic": {
+    "timezone": "America/Bogota"
+  }
+}
