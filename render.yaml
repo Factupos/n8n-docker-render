@@ -13,6 +13,7 @@ services:
       mountPath: /home/node/.n8n
       sizeGB: 1
     envVars:
+      # Configuración del servidor n8n
       - key: N8N_PORT
         value: "5678"
       - key: N8N_HOST
@@ -25,6 +26,8 @@ services:
         value: "/webhook"
       - key: N8N_ENDPOINT_WEBHOOK_TEST
         value: "/webhook-test"
+      
+      # Configuración de autenticación básica
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
       - key: N8N_BASIC_AUTH_USER
@@ -33,17 +36,19 @@ services:
         value: "admin123"
       - key: N8N_USER_MANAGEMENT_DISABLED
         value: "true"
+      
+      # Conexión a la nueva base de datos PostgreSQL
       - key: DB_TYPE
         value: "postgresdb"
       - key: DB_POSTGRESDB_HOST
-        value: "dpg-cvu2fqq4d50c73apf8t0-a.oregon-postgres.render.com"
+        value: "dpg-cvuf0eq4d50c73au6ma0-a.oregon-postgres.render.com"
       - key: DB_POSTGRESDB_PORT
         value: "5432"
       - key: DB_POSTGRESDB_DATABASE
-        value: "n8n_3zik"
+        value: "n8n_data_3vbl"
       - key: DB_POSTGRESDB_USER
         value: "n8nuser"
       - key: DB_POSTGRESDB_PASSWORD
-        value: "f8JnUTQRySfKsm0EQycgbktld8R42u6v"
+        value: "tFpfmTSvsik91mUSWHQhh8552W0qYD2N"
       - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
         value: "false"
