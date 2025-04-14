@@ -20,7 +20,7 @@ services:
         value: "0.0.0.0"
       - key: WEBHOOK_URL
         value: "https://n8n-docker-render-1.onrender.com/"
-      - key: GENERIC_TIMEZONE
+      - key: N8N_ALLOW_ORIGINS
         value: "https://factupos.co"
       - key: N8N_ENDPOINT_WEBHOOK
         value: "/webhook"
