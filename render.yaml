@@ -20,6 +20,8 @@ services:
     # Variables de entorno definidas en Render (sobrescriben las del Dockerfile si difieren)
     envVars:
       # Configuración básica del servidor n8n
+      - key: N8N_ENCRYPTION_KEY
+        value: fA7t9kV!x83pGdS62rBQzMTY*LrA1u!v
       - key: N8N_PORT
         value: "5678"
       - key: N8N_HOST
