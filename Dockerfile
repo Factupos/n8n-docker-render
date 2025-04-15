@@ -27,7 +27,7 @@ ENV N8N_SKIP_WEBHOOK_DEREGISTRATION_SHUTDOWN=true
 # ─────────────────────────────────────────────────────
 ENV N8N_HOST=0.0.0.0
 ENV N8N_PORT=5678
-ENV WEBHOOK_URL=https://n8n-docker-render-1.onrender.com/
+ENV WEBHOOK_URL=https://n8n-docker-render-1.onrender.com
 
 # Endpoints de webhook (puedes ajustarlos si lo deseas)
 ENV N8N_ENDPOINT_WEBHOOK=/webhook
