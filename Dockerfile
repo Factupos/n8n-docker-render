@@ -7,6 +7,7 @@ ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
 # ─────────────────────────────────────────────────────
 # HABILITAR CORS
 # ─────────────────────────────────────────────────────
+ENV N8N_ENCRYPTION_KEY=fA7t9kV!x83pGdS62rBQzMTY*LrA1u!v
 ENV N8N_CORS_ENABLED=true
 ENV N8N_CORS_ALLOWED_ORIGINS=https://factupos.co
 ENV N8N_CORS_ALLOWED_METHODS=GET,POST,OPTIONS
