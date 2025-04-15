@@ -1,5 +1,3 @@
-dockerfile 
-
 # Usa la imagen oficial de n8n (puede ser "latest" u otra versión específica)
 FROM n8nio/n8n:latest
 
