@@ -13,7 +13,7 @@ services:
       mountPath: /home/node/.n8n
       sizeGB: 1
     envVars:
-      # Conexión a la base de datos PostgreSQL
+      # Variables necesarias para la conexión a la base de datos
       - key: DB_TYPE
         value: "postgresdb"
       - key: DB_POSTGRESDB_HOST
