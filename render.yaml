@@ -6,14 +6,54 @@ services:
     region: oregon
     dockerfilePath: Dockerfile
     autoDeploy: true
+
+    # El puerto interno que expone n8n
     ports:
       - 5678
+
+    # Volumen para persistencia de datos
     disk:
       name: n8n-data
       mountPath: /home/node/.n8n
       sizeGB: 1
+
+    # Variables de entorno definidas en Render (sobrescriben las del Dockerfile si difieren)
     envVars:
-      # Variables necesarias para la conexión a la base de datos
+      # Configuración básica del servidor n8n
+      - key: N8N_PORT
+        value: "5678"
+      - key: N8N_HOST
+        value: "0.0.0.0"
+      - key: WEBHOOK_URL
+        value: "https://n8n-docker-render-1.onrender.com/"
+      - key: N8N_ENDPOINT_WEBHOOK
+        value: "/webhook"
+      - key: N8N_ENDPOINT_WEBHOOK_TEST
+        value: "/webhook-test"
+
+      # Habilitar CORS
+      - key: N8N_CORS_ENABLED
+        value: "true"
+      - key: N8N_CORS_ALLOWED_ORIGINS
+        value: "https://factupos.co"
+      - key: N8N_CORS_ALLOWED_METHODS
+        value: "GET,POST,OPTIONS"
+      - key: N8N_CORS_ALLOWED_HEADERS
+        value: "Content-Type,Authorization"
+      - key: N8N_CORS_ALLOW_CREDENTIALS
+        value: "false"
+
+      # Autenticación básica
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "admin"
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "admin123"
+      - key: N8N_USER_MANAGEMENT_DISABLED
+        value: "true"
+
+      # Configuración de la base de datos PostgreSQL
       - key: DB_TYPE
         value: "postgresdb"
       - key: DB_POSTGRESDB_HOST
