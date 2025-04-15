@@ -1,3 +1,5 @@
+yaml
+
 services:
   - type: web
     name: n8n
@@ -7,16 +9,19 @@ services:
     dockerfilePath: Dockerfile
     autoDeploy: true
 
+    # El puerto interno que expone n8n
     ports:
       - 5678
 
+    # Volumen para persistencia de datos
     disk:
       name: n8n-data
       mountPath: /home/node/.n8n
       sizeGB: 1
 
+    # Variables de entorno definidas en Render (sobrescriben las del Dockerfile si difieren)
     envVars:
-      # Configuración del servidor
+      # Configuración básica del servidor n8n
       - key: N8N_PORT
         value: "5678"
       - key: N8N_HOST
@@ -49,3 +54,19 @@ services:
         value: "admin123"
       - key: N8N_USER_MANAGEMENT_DISABLED
         value: "true"
+
+      # Configuración de la base de datos PostgreSQL
+      - key: DB_TYPE
+        value: "postgresdb"
+      - key: DB_POSTGRESDB_HOST
+        value: "dpg-cvuf0eq4d50c73au6ma0-a.oregon-postgres.render.com"
+      - key: DB_POSTGRESDB_PORT
+        value: "5432"
+      - key: DB_POSTGRESDB_DATABASE
+        value: "n8n_data_3vbl"
+      - key: DB_POSTGRESDB_USER
+        value: "n8nuser"
+      - key: DB_POSTGRESDB_PASSWORD
+        value: "tFpfmTSvsik91mUSWHQhh8552W0qYD2N"
+      - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
+        value: "false"
